@@ -22,4 +22,8 @@ npx serve .
 
 - Image-led story built around `assets/generated/`
 - SoundCloud brief: [Agronomic Grower](https://soundcloud.com/cptplastic/agronomic/s-JwrJ8F9Qyy0)
+- Contact close on the main page (`#contact`)
+- Booth / kiosk loop: open `kiosk.html` (press `F` for fullscreen)
 - Source materials in `refrences/`
+
+Update the contact email in `index.html` (`hello@taylorinvention.com`) before publishing.
