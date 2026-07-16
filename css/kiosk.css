@@ -10,6 +10,7 @@
   --amber: #ffb347;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --font-display: "Syne", sans-serif;
+  --font-brand: "Space Grotesk", sans-serif;
   --font-body: "Sora", sans-serif;
 }
 
@@ -136,10 +137,10 @@ body[data-mode="recycle"]::before {
 }
 
 .kiosk-bar__brand {
-  font-family: var(--font-display);
-  font-weight: 800;
+  font-family: var(--font-brand);
+  font-weight: 700;
   font-size: 1.25rem;
-  letter-spacing: -0.04em;
+  letter-spacing: 0.06em;
   color: var(--ink);
   text-decoration: none;
   text-shadow: 0 0 22px var(--glow-soft);
@@ -346,10 +347,10 @@ body[data-mode="recycle"] .viz__frame {
 
 .mark {
   fill: rgba(234, 242, 236, 0.9);
-  font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: -0.05em;
+  font-family: var(--font-brand);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 /* Fans */

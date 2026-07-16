@@ -14,6 +14,7 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
   --font-display: "Syne", sans-serif;
+  --font-brand: "Space Grotesk", sans-serif;
   --font-body: "Sora", sans-serif;
 }
 
@@ -136,10 +137,10 @@ body::after {
 }
 
 .nav__brand {
-  font-family: var(--font-display);
-  font-weight: 800;
+  font-family: var(--font-brand);
+  font-weight: 700;
   font-size: 1.35rem;
-  letter-spacing: -0.04em;
+  letter-spacing: 0.06em;
   color: var(--ink);
   text-shadow: 0 0 20px var(--glow-soft);
 }
@@ -301,10 +302,10 @@ body.menu-open .nav__toggle span:last-child {
 
 .hero__brand {
   margin: 0 0 0.75rem;
-  font-family: var(--font-display);
+  font-family: var(--font-brand);
   font-size: clamp(4.25rem, 15vw, 8rem);
-  font-weight: 800;
-  letter-spacing: -0.07em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   line-height: 0.85;
   text-shadow: 0 0 40px rgba(79, 214, 196, 0.25);
 }
@@ -726,10 +727,10 @@ body.menu-open .nav__toggle span:last-child {
 
 .hub-label {
   fill: var(--ink);
-  font-family: var(--font-display);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-family: var(--font-brand);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .hub-glow {
@@ -1364,10 +1365,10 @@ body.menu-open .nav__toggle span:last-child {
 }
 
 .footer__brand {
-  font-family: var(--font-display);
-  font-weight: 800;
+  font-family: var(--font-brand);
+  font-weight: 700;
   font-size: 2rem;
-  letter-spacing: -0.05em;
+  letter-spacing: 0.05em;
   color: var(--ink);
   margin-bottom: 0.75rem;
   text-shadow: 0 0 24px var(--glow-soft);
