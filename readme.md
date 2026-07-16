@@ -1,8 +1,8 @@
-# TI
+# Agronomic Grower
 
-Investor site for **Taylor Invention** — mobile thermally controlled plant nursery (US 2024/0407307 A1).
+Investor site for **Agronomic Grower** — mobile thermally controlled plant nursery (US 2024/0407307 A1).
 
-Static GitHub Pages (no Jekyll). Brand: **TI**.
+Static GitHub Pages (no Jekyll). Brand mark: **AG**.
 
 ## Local preview
 
@@ -28,4 +28,4 @@ The workflow in `.github/workflows/deploy-pages.yml` publishes on every push to 
 - Booth / kiosk loop: open `kiosk.html` (press `F` for fullscreen)
 - Source materials in `refrences/`
 
-Update the contact email in `index.html` (`hello@taylorinvention.com`) before publishing.
+Update the contact email in `index.html` (`hello@agronomicgrower.com`) before publishing.
