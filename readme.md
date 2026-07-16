@@ -12,9 +12,11 @@ npx serve .
 
 ## Enable GitHub Pages
 
-1. Push to `main`
-2. **Settings → Pages** → Deploy from branch → `main` / root
+1. Push to `main` (or run **Actions → Deploy GitHub Pages → Run workflow**)
+2. **Settings → Pages** → Source: **GitHub Actions**
 3. Live at `https://CptPlastic.github.io/argonomic/`
+
+The workflow in `.github/workflows/deploy-pages.yml` publishes on every push to `main`.
 
 `.nojekyll` disables Jekyll processing.
 
