@@ -176,50 +176,19 @@
     });
   }
 
-  const contactForm = document.querySelector("[data-contact-form]");
-  if (contactForm) {
-    const submitBtn = contactForm.querySelector("[data-contact-submit]");
-    const statusEl = contactForm.querySelector("[data-contact-status]");
+  const openTypebot = () => {
+    if (window.Typebot?.open) {
+      window.Typebot.open();
+      return true;
+    }
+    return false;
+  };
 
-    const setStatus = (message, isError = false) => {
-      if (!statusEl) return;
-      statusEl.hidden = !message;
-      statusEl.textContent = message;
-      statusEl.classList.toggle("is-error", isError);
-    };
-
-    contactForm.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      if (contactForm.classList.contains("is-loading")) return;
-
-      const endpoint = contactForm.getAttribute("action");
-      if (!endpoint || endpoint.includes("REPLACE")) {
-        setStatus("Form endpoint not configured yet.", true);
-        return;
-      }
-
-      contactForm.classList.add("is-loading");
-      if (submitBtn) submitBtn.textContent = "Sending…";
-      setStatus("");
-
-      try {
-        const response = await fetch(endpoint, {
-          method: "POST",
-          body: new FormData(contactForm),
-          headers: { Accept: "application/json" },
-        });
-
-        if (!response.ok) throw new Error("submit failed");
-
-        contactForm.classList.add("is-success");
-        contactForm.reset();
-        if (submitBtn) submitBtn.textContent = "Sent";
-        setStatus("Thanks — we’ll be in touch.");
-      } catch {
-        contactForm.classList.remove("is-loading");
-        if (submitBtn) submitBtn.textContent = "Send message";
-        setStatus("Something went wrong. Try again or email hello@agronomicgrower.com.", true);
+  document.querySelectorAll("[data-typebot-open]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (!openTypebot()) {
+        window.addEventListener("typebot:ready", () => openTypebot(), { once: true });
       }
     });
-  }
+  });
 })();

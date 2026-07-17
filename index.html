@@ -438,61 +438,14 @@
 
       <section class="section contact" id="contact">
         <div class="section__inner contact__inner">
-          <div class="contact__copy">
-            <p class="eyebrow reveal">Contact</p>
-            <h2 class="section__title reveal">Talk to AG.</h2>
-            <p class="section__body reveal">
-              For investors, pilots, and partners. Drop a note — we’ll get back to you.
-            </p>
+          <p class="eyebrow reveal">Contact</p>
+          <h2 class="section__title reveal">Talk to AG.</h2>
+          <p class="section__body reveal">
+            For investors, pilots, and partners. One conversation — no form maze.
+          </p>
+          <div class="contact__actions reveal" data-delay="1">
+            <button type="button" class="btn btn--primary" data-typebot-open>Start conversation</button>
           </div>
-
-          <form
-            class="contact-form reveal"
-            data-delay="1"
-            data-contact-form
-            action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
-            method="POST"
-          >
-            <div class="contact-form__row">
-              <label class="field">
-                <span class="field__label">Name</span>
-                <input type="text" name="name" autocomplete="name" required placeholder="Your name" />
-              </label>
-              <label class="field">
-                <span class="field__label">Email</span>
-                <input type="email" name="email" autocomplete="email" required placeholder="you@company.com" />
-              </label>
-            </div>
-
-            <div class="contact-form__row">
-              <label class="field">
-                <span class="field__label">Organization</span>
-                <input type="text" name="organization" autocomplete="organization" placeholder="Company or fund" />
-              </label>
-              <label class="field">
-                <span class="field__label">Interest</span>
-                <select name="interest" required>
-                  <option value="" disabled selected>Select one</option>
-                  <option value="Investor">Investor</option>
-                  <option value="Pilot">Pilot / deployment</option>
-                  <option value="Partner">Partner</option>
-                  <option value="Other">Other</option>
-                </select>
-              </label>
-            </div>
-
-            <label class="field">
-              <span class="field__label">Message</span>
-              <textarea name="message" rows="5" required placeholder="What are you exploring?"></textarea>
-            </label>
-
-            <input type="text" name="_gotcha" class="contact-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
-            <div class="contact-form__foot">
-              <button class="btn btn--primary" type="submit" data-contact-submit>Send message</button>
-              <p class="contact-form__status" data-contact-status hidden aria-live="polite"></p>
-            </div>
-          </form>
         </div>
       </section>
     </main>
@@ -504,6 +457,17 @@
       <p class="footer__links"><a href="kiosk.html">Booth display</a></p>
     </footer>
 
+    <script type="module">
+      import Typebot from "https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js";
+
+      Typebot.initPopup({
+        typebot: "ag-contact-pfeklkq",
+        apiHost: "https://nsncorp.app.nsnmindlabs.com",
+      });
+
+      window.Typebot = Typebot;
+      window.dispatchEvent(new Event("typebot:ready"));
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
