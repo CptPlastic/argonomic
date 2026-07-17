@@ -14,7 +14,6 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
   --font-display: "Syne", sans-serif;
-  --font-brand: "Outfit", sans-serif;
   --font-body: "Sora", sans-serif;
 }
 
@@ -137,7 +136,7 @@ body::after {
 }
 
 .nav__brand {
-  font-family: var(--font-brand);
+  font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.35rem;
   letter-spacing: -0.04em;
@@ -302,10 +301,10 @@ body.menu-open .nav__toggle span:last-child {
 
 .hero__brand {
   margin: 0 0 0.75rem;
-  font-family: var(--font-brand);
+  font-family: var(--font-display);
   font-size: clamp(4.25rem, 15vw, 8rem);
   font-weight: 800;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.07em;
   line-height: 0.85;
   text-shadow: 0 0 40px rgba(79, 214, 196, 0.25);
 }
@@ -727,10 +726,10 @@ body.menu-open .nav__toggle span:last-child {
 
 .hub-label {
   fill: var(--ink);
-  font-family: var(--font-brand);
-  font-size: 12px;
+  font-family: var(--font-display);
+  font-size: 13px;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 
 .hub-glow {
@@ -1365,10 +1364,10 @@ body.menu-open .nav__toggle span:last-child {
 }
 
 .footer__brand {
-  font-family: var(--font-brand);
+  font-family: var(--font-display);
   font-weight: 800;
   font-size: 2rem;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.05em;
   color: var(--ink);
   margin-bottom: 0.75rem;
   text-shadow: 0 0 24px var(--glow-soft);
